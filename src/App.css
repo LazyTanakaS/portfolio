@@ -39,6 +39,9 @@ main {
   top: 0;
   background: var(--bg-primary);
   z-index: 10;
+  .navbar-links a.active {
+    color: var(--text-primary);
+  }
 }
 
 .navbar-logo {
@@ -71,14 +74,18 @@ main {
   gap: 24px;
 }
 
-.navbar-links a {
+.nav-link {
   font-size: 13px;
   color: var(--text-muted);
   transition: color 0.15s;
 }
 
-.navbar-links a:hover {
+.nav-link:hover {
   color: var(--text-primary);
+}
+
+.nav-link.active {
+  color: var(--accent);
 }
 
 .lang-toggle {
@@ -406,6 +413,32 @@ section {
 .fact-label {
   font-size: 12px;
   color: var(--text-muted);
+}
+
+/* ANIMATION */
+
+.animate-section,
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.animate-section.visible,
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-section,
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* FOOTER */

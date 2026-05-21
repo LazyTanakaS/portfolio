@@ -1,3 +1,5 @@
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 interface AboutProps {
   about: {
     title: string;
@@ -7,11 +9,13 @@ interface AboutProps {
 }
 
 function About({ about }: AboutProps) {
+  const contentRef = useScrollAnimation<HTMLDivElement>();
+
   return (
     <section className="about" id="about">
       <p className="section-title">{about.title}</p>
 
-      <div className="about-content">
+      <div ref={contentRef} className="about-content scroll-reveal">
         <p className="about-text">{about.text}</p>
 
         <div className="about-facts">

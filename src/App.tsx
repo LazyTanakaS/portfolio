@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { content } from "./data/content";
-import type { Lang } from "../types";
+import type { Lang } from "./types";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";

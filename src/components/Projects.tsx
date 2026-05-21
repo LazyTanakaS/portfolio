@@ -1,5 +1,6 @@
 import type { Lang } from "../types";
 import { projects } from "../data/projects";
+import useScrollAnimation from "../hooks/useScrollAnimation";
 
 interface ProjectProps {
   lang: Lang;
@@ -7,11 +8,13 @@ interface ProjectProps {
 }
 
 function Projects({ lang, title }: ProjectProps) {
+  const gridRef = useScrollAnimation<HTMLDivElement>();
+
   return (
     <section className="projects" id="projects">
       <p className="section-title">{title}</p>
 
-      <div className="projects-grid">
+      <div ref={gridRef} className="projects-grid scroll-reveal">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-header">

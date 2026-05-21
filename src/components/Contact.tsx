@@ -1,14 +1,18 @@
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 interface ContactProps {
   title: string;
   location: string;
 }
 
 function Contact({ title, location }: ContactProps) {
+  const listRef = useScrollAnimation<HTMLDivElement>();
+
   return (
     <section className="contact" id="contact">
       <p className="section-title">{title}</p>
 
-      <div className="contact-list">
+      <div ref={listRef} className="contact-list scroll-reveal">
         <div className="contact-item">
           <span className="contact-label">Email</span>
           <a href="mailto:petrokomar16@gmail.com" className="contact-link">
