@@ -3,6 +3,7 @@ interface HeroProps {
     label: string;
     subtitle: string;
     btnProjects: string;
+    btnCv: string;
     btnContact: string;
   };
 }
@@ -18,6 +19,15 @@ function Hero({ hero }: HeroProps) {
       <div className="hero-actions">
         <a href="#projects" className="btn-primary">
           {hero.btnProjects}
+        </a>
+        <a
+          href="/portfolio/Petr_Komar_CV.pdf"
+          download="Petr_Komar_CV.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-outline"
+        >
+          {hero.btnCv}
         </a>
         <a href="#contact" className="btn-outline">
           {hero.btnContact}

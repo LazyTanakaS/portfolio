@@ -39,6 +39,7 @@ export const content: Record<Lang, Copy> = {
       subtitle:
         "Stavím aplikace v React a TypeScript se zaměřením na čistou architekturu. 16+ projektů, živá dema, CI/CD přes GitHub Actions.",
       btnProjects: "Zobrazit projekty",
+      btnCv: "Stáhnout CV",
       btnContact: "Kontakt",
     },
     sections: {
@@ -72,6 +73,7 @@ export const content: Record<Lang, Copy> = {
       subtitle:
         "Building React and TypeScript apps with a focus on clean architecture. 16+ projects, live demos, CI/CD via GitHub Actions.",
       btnProjects: "View projects",
+      btnCv: "Download CV",
       btnContact: "Contact",
     },
     sections: {
