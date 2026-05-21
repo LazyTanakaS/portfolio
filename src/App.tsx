@@ -6,6 +6,8 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import About from "./components/About";
 import "./App.css";
 
 function App() {
@@ -18,10 +20,11 @@ function App() {
       <Navbar lang={lang} onLangChange={setLang} nav={t.nav} />
       <main>
         <Hero hero={t.hero} />
-
+        <About about={t.about} />
         <Projects lang={lang} title={t.sections.projects} />
         <Skills title={t.sections.skills} />
         <Contact title={t.sections.contact} location={t.contact.location} />
+        <Footer lang={lang} />
       </main>
     </div>
   );
